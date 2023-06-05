@@ -13,6 +13,7 @@ main {
   width: 960px;
   margin: 50px auto;
   display: flex;
+  justify-content: center;
 }
 
 .step-box {
@@ -54,24 +55,30 @@ main {
 
 .title {
   margin: 15px 0 5px;
-  width: 280px; /* タイトルの幅を 280px に設定 */
+  width: 280px;
 }
 
 .text {
-  width: 280px; /* テキストの幅を 280px に設定 */
+  width: 280px;
+}
+
+footer {
+  height: 50px;
+  background-color: #aaa;
 }
 
 @media (max-width: 768px) {
   main {
     width: auto;
-    margin: 50px 20px;
+    margin: 50px;
     flex-direction: column;
+    align-items: center; /* 画面中央寄せ */
   }
   
   .step-box {
     margin-right: 0;
     margin-bottom: 20px;
-    width: 100%;
+    width: 90%;
     padding: 10px;
   }
   
@@ -85,12 +92,16 @@ main {
     margin-bottom: 0;
   }
   
-.text {
-width:auto;
+  .text {
+    width: auto;
+  }
 }
 
-footer {
-  height: 50px;
-  background-color: #aaa;
+@media (min-width: 769px) {
+  main {
+    justify-content: center; /* 画面中央寄せ */
+  }
 }
+
+
 
